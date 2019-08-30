@@ -19,6 +19,16 @@ color: #940f04;
 a img {
 border-width: 0;
 }
+title {
+margin: 0;
+padding: 20;
+font-family: Microsoft JhengHei, sans-serif;
+font-size: 120%;
+font-weight: bold;
+line-height: 3em;
+color : #ffffff;
+background-color: #660000;
+}
 h1  {
 font-size : 20pt;
 font-weight : bolder;
