@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="/styles/style.css" rel="stylesheet" type="text/css">
+  <title>Finance</title>
+</head>
+  <body>
+
+「現代投資組合理論」(Modern Portfolio Theory, MPT, or mean-variance analysis) 提出一套數學架構，能夠建構出投資組合，使得在選定的風險下，能夠獲得最高的報酬！
+
+「現代投資組合理論」由經濟學家 <a href="https://en.wikipedia.org/wiki/Harry_Markowitz">Harry Markowitz</a> 於 1952 年所提出，他因此於 1990 年獲頒諾貝爾經濟學獎。
+
+<h3>
+數學模型</h3>
+
+投資組合 (Portfolio):
+<blockquote>
+由 n 項資產組合而成，第 i 項資產占的權重為 \( w_i \)。</blockquote>
+當投資組合裡有 n 項資產時，數學式:
+<blockquote>
+預期報酬 (Expected return, 報酬率的期望值):
+<blockquote>
+\( E(R_p) = \sum_{i=1}^{n}w_iE(R_i) \)
+
+\( R_p \): 投資組合的報酬率 (return on the portfolio)
+
+\( R_i \): 資產 i 的報酬率 (return on asset i)
+
+\( w_i \): 資產 i 在投資組合中的權重 (weighting of component asset i)</blockquote>
+變異數 (Portfolio return variance, 預期報酬變動的幅度, 用來衡量風險):
+<blockquote>
+\( \sigma_p^2 = \sum_{i=1}^{n}w_i^2\sigma_i^2 + \sum_{i=1}^{n}\sum_{j=1, j \neq  i}^{n}w_i w_j \sigma_{i} \sigma_{j} \rho_{ij} \)
+
+\( \sigma_p^2 = \sum_{i=1}^{n}\sum_{j=1}^{n}w_i w_j \sigma_{ij} \)
+
+\( \sigma_{ij} = \sigma_i \sigma_j \rho_{ij} \)
+
+\( \sigma_i \): 資產 i 報酬率的標準差 (sample standard deviation of the periodic returns on an asset)
+
+\( \rho_{ij} \): 資產 i 和資產 j 報酬率的相關係數 (correlation coefficient between the returns on assets i and j)
+
+\( \sigma_{ij} \): 資產 i 和資產 j 報酬率的共變異數 (sample covariance of the periodic returns on assets i and j)</blockquote>
+標準差 (Portfolio return volatility, standard deviation):
+<blockquote>
+\( \sigma_p = \sqrt{\sigma_p^2} \)</blockquote>
+</blockquote>
+當投資組合裡有 2 項資產時，數學式:
+<blockquote>
+預期報酬:
+<blockquote>
+\( E(R_p) = w_1E(R_1) + w_2E(R_2) = w_1E(R_1) + (1-w_1)E(R_2) \)</blockquote>
+變異數:
+<blockquote>
+\( \sigma_p^2 = w_1^2 \sigma_1^2 + w_2^2 \sigma_2^2 + 2w_1 w_2 \sigma_1 \sigma_2 \rho_{12} \)</blockquote>
+</blockquote>
+當投資組合裡有 3 項資產時，數學式:
+<blockquote>
+預期報酬:
+<blockquote>
+\( E(R_p) = w_1E(R_1) + w_2E(R_2) + w_3E(R_3) \)</blockquote>
+變異數:
+<blockquote>
+\( \sigma_p^2 = w_1^2 \sigma_1^2 + w_2^2 \sigma_2^2 + w_3^2 \sigma_3^2 + 2w_1 w_2 \sigma_1 \sigma_2 \rho_{12}  + 2w_1 w_3 \sigma_1 \sigma_3 \rho_{13}  + 2w_2 w_3 \sigma_2 \sigma_3 \rho_{23}\)</blockquote>
+</blockquote>
+<h3>
+分散投資 (Diversification)</h3>
+
+由數學式可證明，<span style="background-color: #cfe2f3;">只要投資組合內的資產並非完全正相關</span> ( \( \rho_{ij} \neq 1 \), 亦即 \( -1 \leqslant \rho_{ij} \lt 1 \) )，<span style="background-color: #cfe2f3;">就可以藉由分散投資降低風險。</span>
+
+分散投資可以做到在同樣的預期報酬下，承受較低的風險。
+
+<h3>
+沒有「無風險利率資產」下的「效率前緣」 (Efficient frontier with no risk-free asset)</h3>
+
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://4.bp.blogspot.com/-369fAFB3zrU/WPYMU8QKWVI/AAAAAAADYyI/UOo1uB2ENx06seFZfOkK7bn8PYvYM2ZgQCLcB/s1600/efficient_frontier_with_risk_free.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://4.bp.blogspot.com/-369fAFB3zrU/WPYMU8QKWVI/AAAAAAADYyI/UOo1uB2ENx06seFZfOkK7bn8PYvYM2ZgQCLcB/s1600/efficient_frontier_with_risk_free.png" width="50%" /></a></div>
+
+上圖中的藍色星號代表不同的資產，有各自的報酬率 (Expected Return) 及風險 (Standard Deviation)。
+
+拋物線的右側是這些資產以不同的權重組成投資組合後，所能夠達到的各種可能的報酬率及風險。
+
+拋物線的上沿稱之為「效率前緣」 (或稱為「效率前沿」) ，在「效率前緣」上的每個點，是在相同風險的情況下能夠達到最高報酬率的投資組合，也可說是在相同報酬率的情況下能夠達到最低風險的投資組合。
+
+<h3>
+雙共同基金理論 (Two mutual fund theorem)</h3>
+
+在「效率前緣」上的每個點，都可以由「效率前緣」上任意兩點組合而成。
+
+也就是說，投資者可以使用落於「效率前緣」上的兩檔共同基金，組合出位於「效率前緣」上期望的報酬及風險。
+
+<h3>
+「無風險資產」及「最佳資本配置線」 (Risk-free asset and the best possible capital allocation line)</h3>
+
+理論上，「無風險資產」所能獲得的利率稱為「無風險利率」 (risk free rate)；實務上，短期的政府公債可視為「無風險資產」，因為政府破產的機率一般來說相當低。
+
+因為「無風險資產」的變異數是 0 (因此稱為無風險資產)，它和其他資產的相關係數是 0，因此它和其他資產組合後，風險及報酬呈線性關係。
+
+把「無風險資產」納入投資組合後，新的「效率前緣」為上圖所示的斜線，稱之為「最佳資本配置線」。
+
+「最佳資本配置線」和垂直軸的交點，是「無風險利率」。
+
+「最佳資本配置線」和原本的「效率前緣」的切點，稱之為「切線投資組合」 (tangency portfolio)。
+
+「最佳資本配置線」的數學式:
+<blockquote>
+\( E(R_c) = R_f + \sigma_c \frac{E(R_p)-R_f}{\sigma_p} \)
+<blockquote>
+p: 「切線投資組合」 (tangency portfolio)。
+
+f: 「無風險資產」。
+
+c: 「切線投資組合」和「無風險資產」組合而成的投資組合。</blockquote>
+</blockquote>
+「最佳資本配置線」和原本的「效率前緣」相比，同樣的風險下可以達到更高的報酬，或者說是同樣的報酬下可以達到更低的風險。
+
+因此，<span style="background-color: #cfe2f3;">以「無風險資產」和「切線投資組合」組合而成的投資組合，能夠達到「同樣的風險下，最高的報酬」或「同樣的報酬下，最低的風險」。</span>
+
+<h3>
+應用上須留意之處</h3>
+
+1. 需要能夠估計各種資產未來的報酬及標準差，但實務上並不容易做到。
+
+2. 「現代投資組合理論」使用簡單的數學模型來分析，單純把價格變動化約為變異數，並沒有把導致資產價格變動的因素納入模型架構內，因此和真實狀況會有相當程度的落差。
+
+3. 「現代投資組合理論」假設市場是有效率的，但現實情況不見得是如此。
+
+<h1>
+延伸閱讀</h1>
+
+[Wiki] <a href="https://en.wikipedia.org/wiki/Modern_portfolio_theory">Modern Portfolio Theory</a>
+
+<a href="http://murphymind.blogspot.tw/2017/05/portfolio.html">【股市、債市、無利率風險資產】投資組合建構的立論基礎及績效回測</a>
+
+<a href="http://www.calculatinginvestor.com/2011/06/07/efficient-frontier-1/">Calculating the Efficient Frontier: Part 1</a> - A Matrix Based Example of  Mean-Variance Optimization using Octave
+
+<a href="http://www.calculatinginvestor.com/2011/06/14/efficient-frontier-part-2/">Calculating the Efficient Frontier: Part 2</a> - A Matrix Based Approach for Calculating Portfolio Weights
+
+<a href="http://www.calculatinginvestor.com/2011/06/21/efficient-frontier-3/">Calculating the Efficient Frontier: Part 3</a> - Calculating the Efficient Frontier with a Risk-Free Asset
+
+  </body>
+</html>
