@@ -25,7 +25,7 @@
 
  <h1>應用「現代投資組合理論」進行「投資組合最佳化」</h1>
     
-<p>「現代投資組合理論」(Modern Portfolio Theory, MPT, or mean-variance analysis) 提出一套數學架構，能夠建構出投資組合，使得在選定的風險下，能夠獲得最高的報酬！</p>
+<p>「現代投資組合理論」(Modern Portfolio Theory, MPT, or mean-variance analysis) 提出了一套數學架構，能夠建構出投資組合，使得在選定的風險下，能夠獲得最高的報酬！</p>
 
 <p>「現代投資組合理論」由經濟學家 <a href="https://en.wikipedia.org/wiki/Harry_Markowitz">Harry Markowitz</a> 於 1952 年所提出，他因此於 1990 年獲頒諾貝爾經濟學獎。</p>
 
@@ -35,44 +35,29 @@
 投資組合 (Portfolio):
 <blockquote>
 由 n 項資產組合而成，第 i 項資產占的權重為 \( w_i \)。</blockquote>
-當投資組合裡有 n 項資產時，數學式:
-<blockquote>
-預期報酬 (Expected return, 報酬率的期望值):
-<blockquote>
-  \( E(R_p) = \sum_{i=1}^{n}w_iE(R_i) \) <br \><br \>
-
-\( R_p \): 投資組合的報酬率 (return on the portfolio) <br \><br \>
-
-\( R_i \): 資產 i 的報酬率 (return on asset i) <br \><br \>
-
-\( w_i \): 資產 i 在投資組合中的權重 (weighting of component asset i)</blockquote>
-變異數 (Portfolio return variance, 預期報酬變動的幅度, 用來衡量風險):
-<blockquote>
-\( \sigma_p^2 = \sum_{i=1}^{n}w_i^2\sigma_i^2 + \sum_{i=1}^{n}\sum_{j=1, j \neq  i}^{n}w_i w_j \sigma_{i} \sigma_{j} \rho_{ij} \) <br \><br \>
-
-\( \sigma_p^2 = \sum_{i=1}^{n}\sum_{j=1}^{n}w_i w_j \sigma_{ij} \) <br \><br \>
-
-\( \sigma_{ij} = \sigma_i \sigma_j \rho_{ij} \) <br \><br \>
-
-\( \sigma_i \): 資產 i 報酬率的標準差 (sample standard deviation of the periodic returns on an asset) <br \><br \>
-
-\( \rho_{ij} \): 資產 i 和資產 j 報酬率的相關係數 (correlation coefficient between the returns on assets i and j) <br \><br \>
-
-\( \sigma_{ij} \): 資產 i 和資產 j 報酬率的共變異數 (sample covariance of the periodic returns on assets i and j)</blockquote>
-標準差 (Portfolio return volatility, standard deviation):
-<blockquote>
-\( \sigma_p = \sqrt{\sigma_p^2} \)</blockquote>
-</blockquote>
-當投資組合裡有 2 項資產時，數學式:
+當投資組合裡有 2 項資產時:
 <blockquote>
 預期報酬:
 <blockquote>
-\( E(R_p) = w_1E(R_1) + w_2E(R_2) = w_1E(R_1) + (1-w_1)E(R_2) \)</blockquote>
+  \( E(R_p) = w_1 E(R_1) + w_2 E(R_2) = w_1 E(R_1) + (1-w_1)E(R_2) \)
+
+  \( E \): 期望值 <br \><br \>
+
+  \( R_p \): 投資組合的報酬率 (return on the portfolio) <br \><br \>
+
+  \( R_1 \): 資產 1 的報酬率 (return on asset 1) <br \><br \>  
+
+  \( R_2 \): 資產 2 的報酬率 (return on asset 2) <br \><br \>  
+
+  \( w_1 \): 資產 1 在投資組合中的權重 (weighting of component asset 1)
+  
+  \( w_2 \): 資產 2 在投資組合中的權重 (weighting of component asset 2)
+</blockquote>
 變異數:
 <blockquote>
 \( \sigma_p^2 = w_1^2 \sigma_1^2 + w_2^2 \sigma_2^2 + 2w_1 w_2 \sigma_1 \sigma_2 \rho_{12} \)</blockquote>
 </blockquote>
-當投資組合裡有 3 項資產時，數學式:
+當投資組合裡有 3 項資產時:
 <blockquote>
 預期報酬:
 <blockquote>
@@ -80,6 +65,32 @@
 變異數:
 <blockquote>
 \( \sigma_p^2 = w_1^2 \sigma_1^2 + w_2^2 \sigma_2^2 + w_3^2 \sigma_3^2 + 2w_1 w_2 \sigma_1 \sigma_2 \rho_{12}  + 2w_1 w_3 \sigma_1 \sigma_3 \rho_{13}  + 2w_2 w_3 \sigma_2 \sigma_3 \rho_{23}\)</blockquote>
+</blockquote>
+當投資組合裡有 n 項資產時:
+<blockquote>
+預期報酬 (Expected return, 報酬率的期望值):
+<blockquote>
+  \( E(R_p) = \sum_{i=1}^{n}w_iE(R_i) \) <br \><br \>
+
+  \( R_i \): 資產 i 的報酬率 (return on asset i) <br \><br \>
+
+  \( w_i \): 資產 i 在投資組合中的權重 (weighting of component asset i)</blockquote>
+變異數 (Portfolio return variance, 預期報酬變動的幅度, 用來衡量風險):
+<blockquote>
+  \( \sigma_p^2 = \sum_{i=1}^{n}w_i^2\sigma_i^2 + \sum_{i=1}^{n}\sum_{j=1, j \neq  i}^{n}w_i w_j \sigma_{i} \sigma_{j} \rho_{ij} \) <br \><br \>
+
+  \( \sigma_p^2 = \sum_{i=1}^{n}\sum_{j=1}^{n}w_i w_j \sigma_{ij} \) <br \><br \>
+
+  \( \sigma_{ij} = \sigma_i \sigma_j \rho_{ij} \) <br \><br \>
+
+  \( \sigma_i \): 資產 i 報酬率的標準差 (sample standard deviation of the periodic returns on an asset) <br \><br \>
+
+  \( \rho_{ij} \): 資產 i 和資產 j 報酬率的相關係數 (correlation coefficient between the returns on assets i and j) <br \><br \>
+
+  \( \sigma_{ij} \): 資產 i 和資產 j 報酬率的共變異數 (sample covariance of the periodic returns on assets i and j)</blockquote>
+標準差 (Portfolio return volatility, standard deviation):
+<blockquote>
+  \( \sigma_p = \sqrt{\sigma_p^2} \)</blockquote>
 </blockquote>
 <h3>
 分散投資 (Diversification)</h3>
