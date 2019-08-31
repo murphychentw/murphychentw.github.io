@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="/styles/style.css" rel="stylesheet" type="text/css">
+  <script async='async' src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML' type='text/javascript'></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-8629966760577953",
+          enable_page_level_ads: true
+     });
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-3604653-7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-3604653-7');
+  </script>
+  <title>建構最佳化投資組合及績效回測 (2008-2018)</title>
+</head>
+  <body>
+
+ <h1>建構最佳化投資組合及績效回測 (2008-2018)</h1>
+    
+<p>考慮下列投資標的：</p>
+
+<a href="https://3.bp.blogspot.com/-QAeYVniLKgA/XM7rhwo6qGI/AAAAAAAE3Bg/Ep_VZJygYiYiQTwDTOatJpQhsVpBJrU2wCLcBGAs/s1600/2019_05_05_assets.png" imageanchor="1"><img border="0" data-original-height="267" data-original-width="1426" src="https://3.bp.blogspot.com/-QAeYVniLKgA/XM7rhwo6qGI/AAAAAAAE3Bg/Ep_VZJygYiYiQTwDTOatJpQhsVpBJrU2wCLcBGAs/s1600/2019_05_05_assets.png" width="70%" /></a>
+
+<p>投資標的的歷史績效資料：</p>
+
+<a href="https://2.bp.blogspot.com/-XgWIjyPXY88/XM7uAKQQy8I/AAAAAAAE3CA/SHBTHf1eP9cVjLZfo8T9tP853V9R4aOMgCLcBGAs/s1600/2019_05_05_assets_historical_returns.png" imageanchor="1"><img border="0" data-original-height="575" data-original-width="634" src="https://2.bp.blogspot.com/-XgWIjyPXY88/XM7uAKQQy8I/AAAAAAAE3CA/SHBTHf1eP9cVjLZfo8T9tP853V9R4aOMgCLcBGAs/s1600/2019_05_05_assets_historical_returns.png" width="30%" /></a>
+
+<p>以 random number 建立上述投資標的各種比重的排列組合，作出下圖，用來找出什麼樣的資產配置在給定的報酬率 (expected return) 之下，能夠帶來最小的風險 (portfolio return variance)：</p>
+
+<a href="https://1.bp.blogspot.com/-aXWlDLpeBpw/XM75arXqrbI/AAAAAAAE3Co/3u-gPqWI40wUpX55qQcqxwIvQsnzTCXwACLcBGAs/s1600/2019_05_05_portfolio_return_vs_risk.png" imageanchor="1"><img border="0" data-original-height="687" data-original-width="1600" src="https://1.bp.blogspot.com/-aXWlDLpeBpw/XM75arXqrbI/AAAAAAAE3Co/3u-gPqWI40wUpX55qQcqxwIvQsnzTCXwACLcBGAs/s1600/2019_05_05_portfolio_return_vs_risk.png" width="90%" /></a>
+
+圖例說明：
+<blockquote>
+<p>藍色小點是「年金+股市+債市」各種不同權重下的 mean return v.s. standard deviation</p>
+
+<p>各種顏色的大點是下列幾種資產配置下的 mean return v.s. standard deviation:</p>
+
+<a href="https://2.bp.blogspot.com/-OUquA91GAEk/XM75wCCYCSI/AAAAAAAE3C8/EoNUcZL-XNAfjeAKcqaPOBTxAGxuzrt_gCLcBGAs/s1600/2019-05-05_portfolio_asset_weighting.png" imageanchor="1"><img border="0" data-original-height="461" data-original-width="716" src="https://2.bp.blogspot.com/-OUquA91GAEk/XM75wCCYCSI/AAAAAAAE3C8/EoNUcZL-XNAfjeAKcqaPOBTxAGxuzrt_gCLcBGAs/s1600/2019-05-05_portfolio_asset_weighting.png" width="40%" /></a></blockquote>
+
+<p>圖中越往上，報酬率越高，越往左，風險越低。</p>
+
+<p>在同樣的風險下 (固定 x 座標)，越往上，是越好的投資組合，因為風險不變，但報酬率更高。</p>
+
+<p>在同樣的報酬率下 (固定 y 座標)，越往左，是越好的投資組合，因為報酬率不變，但風險更低。</p>
+
+<p>這些點在左上側形成了「效率前緣」 (Efficient frontier) 。(關於「效率前緣」 的說明，可參考：<a href="http://murphychentw.github.io/finance/modern.portfolio.theory.html">應用「現代投資組合理論」進行「投資組合最佳化」</a>)</p>
+
+<p>下圖是上述幾種資產配置下的年化報酬率：</p>
+
+<a href="https://2.bp.blogspot.com/-WJFxgz6zmRU/XM76-zwjRZI/AAAAAAAE3DU/bVgho4JA1EQvu4bfv2JkYhctPYsk_LnigCLcBGAs/s1600/2019_05_05_portfolio_yearly_return.png" imageanchor="1"><img border="0" data-original-height="689" data-original-width="1600" src="https://2.bp.blogspot.com/-WJFxgz6zmRU/XM76-zwjRZI/AAAAAAAE3DU/bVgho4JA1EQvu4bfv2JkYhctPYsk_LnigCLcBGAs/s1600/2019_05_05_portfolio_yearly_return.png" width="90%" /></a>
+
+<a href="https://2.bp.blogspot.com/-qBQNFB56jPg/XNBCaLHwLcI/AAAAAAAE3F4/fbZv6ywaorUoK5QDyHP42YLzjS4AH5OjgCLcBGAs/s1600/2019_05_05_portfolio_yearly_return_table.png" imageanchor="1"><img border="0" data-original-height="572" data-original-width="1060" src="https://2.bp.blogspot.com/-qBQNFB56jPg/XNBCaLHwLcI/AAAAAAAE3F4/fbZv6ywaorUoK5QDyHP42YLzjS4AH5OjgCLcBGAs/s1600/2019_05_05_portfolio_yearly_return_table.png" width="60%" /></a>
+
+<p>下圖是上述幾種資產配置下的累計報酬率：</p>
+
+<a href="https://4.bp.blogspot.com/-ffbThUSPwv8/XM79ZFXDMrI/AAAAAAAE3EA/K0uB4sH5-8UUXaSgA_LymaMPtuv1COSSwCLcBGAs/s1600/2019_05_05_portfolio_cumulative_return.png" imageanchor="1"><img border="0" data-original-height="684" data-original-width="1600" src="https://4.bp.blogspot.com/-ffbThUSPwv8/XM79ZFXDMrI/AAAAAAAE3EA/K0uB4sH5-8UUXaSgA_LymaMPtuv1COSSwCLcBGAs/s1600/2019_05_05_portfolio_cumulative_return.png" width="90%" /></a>
+
+<a href="https://3.bp.blogspot.com/-5tI6FVh_PPo/XM7-F51zGpI/AAAAAAAE3EQ/-gZhkVjhztQ_HhiSWux686k3P81NWKN-ACLcBGAs/s1600/2019_05_05_portfolio_cumulative_return_table.png" imageanchor="1"><img border="0" data-original-height="464" data-original-width="1172" src="https://3.bp.blogspot.com/-5tI6FVh_PPo/XM7-F51zGpI/AAAAAAAE3EQ/-gZhkVjhztQ_HhiSWux686k3P81NWKN-ACLcBGAs/s1600/2019_05_05_portfolio_cumulative_return_table.png" width="60%" /></a>
+
+<p>投資標的之間的相關係數矩陣 (correlation matrix):</p>
+
+<a href="https://4.bp.blogspot.com/-ulTTlvCYDo8/XM7_swVRD2I/AAAAAAAE3Eo/XTbMkX7j2dkKnitgAlTi6p6Ce_fo1_U5QCLcBGAs/s1600/2019_05_05_correlation_matrix.png" imageanchor="1"><img border="0" data-original-height="286" data-original-width="549" src="https://4.bp.blogspot.com/-ulTTlvCYDo8/XM7_swVRD2I/AAAAAAAE3Eo/XTbMkX7j2dkKnitgAlTi6p6Ce_fo1_U5QCLcBGAs/s1600/2019_05_05_correlation_matrix.png" width="30%" /></a>
+
+<p>各種投資組合的報酬率分佈 (min, 1st quartile, 2nd quartile, 3rd quartile, max):</p>
+
+<a href="https://2.bp.blogspot.com/-xUqZaI3G45s/XNA65aPV_XI/AAAAAAAE3Fk/Xj_goJ4DyrY9vtOzTvumzkpyS1ZBQo_xQCLcBGAs/s1600/2019_05_05_distribution_return.png" imageanchor="1"><img border="0" data-original-height="687" data-original-width="1600" src="https://2.bp.blogspot.com/-xUqZaI3G45s/XNA65aPV_XI/AAAAAAAE3Fk/Xj_goJ4DyrY9vtOzTvumzkpyS1ZBQo_xQCLcBGAs/s1600/2019_05_05_distribution_return.png" width="90%" /></a>
+
+<h1>
+注</h1>
+
+<p>本文的資料沒有考慮稅賦的議題: (1) 沒有考慮美國 ETF 配息時會被課 30% 的稅 (2) 沒有考慮海外交易所得超過一定數額需要繳綜合所得稅。</p>
+
+本文的圖表以 R 及 plotly 計算繪製：
+<blockquote>
+<p>原始碼: <a href="https://github.com/murphychentw/portfolio/blob/master/portfolio_n_assets_v10_2019.r">portfolio_n_assets_v10_2019.r</a></p>
+
+<p>投資標的的歷史績效資料：<a href="https://github.com/murphychentw/portfolio/blob/master/data_6_assets_2019.txt">data_6_assets_2019.txt</a></p>
+
+<p>資產配置：<a href="https://github.com/murphychentw/portfolio/blob/master/portfolio_6_assets_2019.txt">portfolio_6_assets_2019.txt</a></blockquote></p>
+
+    <p align="right">作者: Murphy Chen</p>
+    
+  </body>
+</html>
