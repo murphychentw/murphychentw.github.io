@@ -104,6 +104,7 @@
        * the authorized user's calendar. If no events are found an
        * appropriate message is printed.
        */
+      var response;
       function insertEvents() {
         var event = {
             'summary': '六齋日',
@@ -127,6 +128,7 @@
           'calendarId': '9dckncuhl1o92ub9nm68qo44o0@group.calendar.google.com',
           'resource': event
         }).then(function(evt) {
+            response = evt;
             appendPre('Event created: ' + evt + ' link: ' + evt.htmlLink);
         }).catch(e => {
             console.log('There has been a problem with the operation: ' + e.message);
