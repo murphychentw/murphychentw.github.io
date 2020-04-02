@@ -106,14 +106,14 @@
        * the authorized user's calendar. If no events are found an
        * appropriate message is printed.
        */
-      function insertEvents(date) {
+      function insertEvents(dateToInsert) {
         var event = {
             'summary': '六齋日',
             'start': {
-                'date': date
+                'date': dateToInsert
             },
             'end': {
-                'date': date
+                'date': dateToInsert
             }
         };
         gapi.client.calendar.events.insert({
@@ -148,9 +148,9 @@
               var lunarDay = lunar.lunarDay;
               if (lunarDay === 8 || lunarDay === 14 || lunarDay === 15 || lunarDay === 23 || lunarDay === 29 || lunarDay === 30) {
                   sixCommandmentsDays.push(new Date(d));
-                  var date = solar.solarYear.toString() + '-' + solar.solarMonth.toString() + '-' + solar.solarDay.toString();
-                  appendPre('add this day: ' + date);
-                  insertEvents(date);
+                  var dateToInsert = solar.solarYear.toString() + '-' + solar.solarMonth.toString() + '-' + solar.solarDay.toString();
+                  appendPre('add this day: ' + dateToInsert);
+                  insertEvents(dateToInsert);
               }
               daysList.push(new Date(d));
           }
