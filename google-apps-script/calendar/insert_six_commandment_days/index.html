@@ -107,6 +107,7 @@
       var lunar;
 
       var now = new Date();
+      //var end = new Date(2099,11,31);
       var end = new Date(2020,5,31);
       var daysList = [];
       var sixCommandmentsDays = [];
@@ -144,6 +145,7 @@
       function insertNextSixCommandmentDay() {
 
           if (d>end) {
+              appendPre('Done');
               return;
           }
 
