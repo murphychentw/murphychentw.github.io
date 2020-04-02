@@ -123,7 +123,7 @@
           appendPre('Event created: ' + event.htmlLink);
         });
         */
-        gapi.client.calendar.events.list({
+        gapi.client.calendar.events.insert({
           'calendarId': '9dckncuhl1o92ub9nm68qo44o0@group.calendar.google.com',
           'resource': event
         }).then(function(response) {
