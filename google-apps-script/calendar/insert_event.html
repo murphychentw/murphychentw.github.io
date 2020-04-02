@@ -126,8 +126,7 @@
         gapi.client.calendar.events.insert({
           'calendarId': '9dckncuhl1o92ub9nm68qo44o0@group.calendar.google.com',
           'resource': event
-        }).then(function(response) {
-            var events = response.result.items;
+      }).then(function(event) {
             appendPre('Event created: ' + event.htmlLink);
         }).catch(e => {
             console.log('There has been a problem with the operation: ' + e.message);
