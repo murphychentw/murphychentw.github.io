@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
   </head>
   <body>
-    <p>Google Calendar API Quickstart</p>
+    <p>Google Calendar API: Add An Event</p>
 
     <!--Add buttons to initiate auth sequence and sign out-->
     <button id="authorize_button" style="display: none;">Authorize</button>
@@ -66,7 +66,7 @@
         if (isSignedIn) {
           authorizeButton.style.display = 'none';
           signoutButton.style.display = 'block';
-          listUpcomingEvents();
+          insertEvents();
         } else {
           authorizeButton.style.display = 'block';
           signoutButton.style.display = 'none';
@@ -104,7 +104,7 @@
        * the authorized user's calendar. If no events are found an
        * appropriate message is printed.
        */
-      function listUpcomingEvents() {
+      function insertEvents() {
         var event = {
             'summary': '六齋日',
             'start': {
@@ -131,4 +131,4 @@
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
     </script>
   </body>
-</html> 
+</html>
