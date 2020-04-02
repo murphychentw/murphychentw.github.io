@@ -117,7 +117,7 @@
         var request = gapi.client.calendar.events.insert({
           'calendarId': '9dckncuhl1o92ub9nm68qo44o0@group.calendar.google.com',
           'resource': event
-        };
+        });
         requet.execute(function(event) {
           appendPre('Event created: ' + event.htmlLink);
         });
