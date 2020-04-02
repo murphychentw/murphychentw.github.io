@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List All 6 Commandment Days</title>
+</head>
+<body>
+<div id="content"></div>
+</body>
+<script type="text/javascript" src="LunarSolarConverter.js"></script>
+<script type="text/javascript">
+    var converter = new LunarSolarConverter();
+
+    var solar = new Solar();
+    var lunar;
+
+    var now = new Date();
+    var end = new Date(2099,11,31);
+    var daysList = [];
+    var sixCommandmentsDays = [];
+    for (var d = now; d <= end; d.setDate(d.getDate() + 1)) {
+
+        solar.solarYear = d.getFullYear();
+        solar.solarMonth = d.getMonth()+1;
+        solar.solarDay = d.getDate();
+
+        lunar = converter.SolarToLunar(solar);
+
+        var lunarDay = lunar.lunarDay;
+        if (lunarDay === 8 || lunarDay === 14 || lunarDay === 15 || lunarDay === 23 || lunarDay === 29 || lunarDay === 30) {
+            sixCommandmentsDays.push(new Date(d));
+        }
+        daysList.push(new Date(d));
+    }
+
+</script>
+</html>
