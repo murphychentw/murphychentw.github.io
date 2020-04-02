@@ -101,13 +101,26 @@
         pre.appendChild(textContent);
       }
 
+      var converter = new LunarSolarConverter();
+
+      var solar = new Solar();
+      var lunar;
+
+      var now = new Date();
+      var end = new Date(2020,5,31);
+      var daysList = [];
+      var sixCommandmentsDays = [];
+
+      var d = now;
+
       /**
        * Print the summary and start datetime/date of the next ten events in
        * the authorized user's calendar. If no events are found an
        * appropriate message is printed.
        */
       function insertEvents(dateToInsert) {
-        var event = {
+
+          var event = {
             'summary': '六齋日',
             'start': {
                 'date': dateToInsert
@@ -121,38 +134,36 @@
           'resource': event
         }).then(function(response) {
             appendPre('Event created: ' + response.result.htmlLink);
+            insertNextSixCommandmentDay();
         }).catch(e => {
             console.log('There has been a problem with the operation: ' + e.message);
         });
       }
 
-      function insertSixCommandmentDays() {
+      function insertNextSixCommandmentDay() {
 
-          var converter = new LunarSolarConverter();
+          if (d>end) {
+              return;
+          }
 
-          var solar = new Solar();
-          var lunar;
+          daysList.push(new Date(d));
 
-          var now = new Date();
-          var end = new Date(2099,11,31);
-          var daysList = [];
-          var sixCommandmentsDays = [];
-          for (var d = now; d <= end; d.setDate(d.getDate() + 1)) {
+          solar.solarYear = d.getFullYear();
+          solar.solarMonth = d.getMonth()+1;
+          solar.solarDay = d.getDate();
 
-              solar.solarYear = d.getFullYear();
-              solar.solarMonth = d.getMonth()+1;
-              solar.solarDay = d.getDate();
+          lunar = converter.SolarToLunar(solar);
 
-              lunar = converter.SolarToLunar(solar);
+          var lunarDay = lunar.lunarDay;
 
-              var lunarDay = lunar.lunarDay;
-              if (lunarDay === 8 || lunarDay === 14 || lunarDay === 15 || lunarDay === 23 || lunarDay === 29 || lunarDay === 30) {
-                  sixCommandmentsDays.push(new Date(d));
-                  var dateToInsert = solar.solarYear.toString() + '-' + solar.solarMonth.toString() + '-' + solar.solarDay.toString();
-                  appendPre('add this day: ' + dateToInsert);
-                  insertEvents(dateToInsert);
-              }
-              daysList.push(new Date(d));
+          if (lunarDay === 8 || lunarDay === 14 || lunarDay === 15 || lunarDay === 23 || lunarDay === 29 || lunarDay === 30) {
+              sixCommandmentsDays.push(new Date(d));
+              var dateToInsert = solar.solarYear.toString() + '-' + solar.solarMonth.toString() + '-' + solar.solarDay.toString();
+              appendPre('add this day: ' + dateToInsert);
+              insertEvents(dateToInsert);
+          } else {
+              d.setDate(d.getDate() + 1);
+              insertNextSixCommandmentDay();
           }
       }
 
