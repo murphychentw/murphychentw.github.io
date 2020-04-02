@@ -23,7 +23,7 @@
 
       // Authorization scopes required by the API; multiple scopes can be
       // included, separated by spaces.
-      var SCOPES = "https://www.googleapis.com/auth/calendar.readonly";
+      var SCOPES = "https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/calendar.events";
 
       var authorizeButton = document.getElementById('authorize_button');
       var signoutButton = document.getElementById('signout_button');
@@ -130,7 +130,7 @@
             var events = response.result.items;
             appendPre('Event created: ' + event.htmlLink);
         }).catch(e => {
-            console.log('There has been a problem with your fetch operation: ' + e.message);
+            console.log('There has been a problem with the operation: ' + e.message);
         });
       }
     </script>
