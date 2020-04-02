@@ -134,6 +134,7 @@
           'resource': event
         }).then(function(response) {
             appendPre('Event created: ' + response.result.htmlLink);
+            d.setDate(d.getDate() + 1);
             insertNextSixCommandmentDay();
         }).catch(e => {
             console.log('There has been a problem with the operation: ' + e.message);
